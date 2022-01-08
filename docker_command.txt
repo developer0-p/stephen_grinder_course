@@ -32,3 +32,4 @@ k rollout restart deployment posts-depl
 
 minikube start
 minikube ip
+minikube addons enable ingress
