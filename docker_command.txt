@@ -11,7 +11,6 @@ docker stop 39cca4a09a89
 docker kill 39cca4a09a89
 docker exec -it 22a0c1bc0a35 redis-cli
 docker exec -it 22a0c1bc0a35 sh
-eval $(minikube docker-env)
 docker build -t minskonsty/redis:latest .
 docker commit -c 'CMD ["redis-server"]' 23972c9f9c4c
 docker push minskonsty/posts
@@ -29,7 +28,7 @@ k get deployments
 k rollout restart deployment posts-depl
 
 #################################
-
+eval $(minikube docker-env)
 minikube start
 minikube ip
 minikube addons enable ingress
