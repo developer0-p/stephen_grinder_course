@@ -32,3 +32,8 @@ eval $(minikube docker-env)
 minikube start
 minikube ip
 minikube addons enable ingress
+
+#################################
+minikube start --profile custom
+skaffold config set --global local-cluster true
+eval $(minikube -p custom docker-env)
