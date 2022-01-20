@@ -1,3 +1,5 @@
 /blog
 /fetchjson/node_modules
 /features/node_modules
+/maps/node_module
+/maps/.cache
